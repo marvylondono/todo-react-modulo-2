@@ -1,0 +1,18 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended" // Debe ir ÚLTIMO para desactivar reglas conflictivas
+  ],
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }], // Fuerza comillas simples
+    "react/react-in-jsx-scope": "off", // Desactiva la necesidad de importar React
+    "quotes": "off" // Desactiva la regla de comillas de ESLint (que Prettier manejará)
+  },
+  "env": { "browser": true, "es6": true }
+}

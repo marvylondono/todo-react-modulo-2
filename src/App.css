@@ -1,0 +1,134 @@
+/* Estilos base */
+.app-container {
+  min-height: 100vh;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* Modo claro */
+.light-mode {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* Modo oscuro consolidado */
+.dark-mode {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.dark-mode .ant-switch {
+  background-color: #434343;
+}
+
+.dark-mode .ant-input {
+  background-color: #262626 !important;
+  border-color: #434343 !important;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark-mode .ant-list-item {
+  background-color: #262626 !important;
+  border-color: #434343 !important;
+}
+
+/* Checkboxes */
+.ant-checkbox-inner {
+  background-color: #f0f0f0;
+  border-color: #d9d9d9 !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1890ff;
+  border-color: #1890ff !important;
+}
+
+/* Transiciones suaves */
+* {
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.2s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+/* Header mejorado */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alineación superior */
+  padding: 15px 5% 10px; /* Reducción de padding inferior */
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+  margin-bottom: 1.5rem; /* Espacio bajo el header */
+}
+
+.header-content {
+  flex-grow: 1;
+  padding-right: 60px; /* Espacio para el switch */
+}
+
+.app-header h1 {
+  margin: 0 0 0.3rem; /* Margen inferior reducido */
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Contenedor TodoList */
+.todo-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Lista de tareas */
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.todo-list li {
+  padding: 12px 15px;
+  margin: 8px 0;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dark-mode .todo-list li {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5% 10px;
+    text-align: center;
+  }
+
+  .header-content {
+    padding-right: 0;
+  }
+
+  .theme-switch-container {
+    position: static;
+    margin-top: 0;
+    order: -1; /* Switch arriba en móviles */
+    align-self: flex-end; /* Alineado a la derecha */
+  }
+
+  .todo-list {
+    padding: 0 15px;
+  }
+}

@@ -23,10 +23,8 @@ const ThemeWrapper = () => {
       >
         <header className="app-header">
           <div className="header-content">
-            <h1>Bootcamp Frontend UTE - 2025. 🚀</h1>
-            <div className="author-name">
-              Creado por Gerson Javier Castellanos Niño
-            </div>
+            <h1>Práctica 2 - React</h1>
+            <div className="author-name">Marvy Lucelly Londoño López</div>
           </div>
           <ThemeSwitch />
         </header>
